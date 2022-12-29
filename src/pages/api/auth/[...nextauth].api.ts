@@ -8,11 +8,7 @@ export const authOptions: NextAuthOptions = {
             clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
             authorization: {
                 params: {
-                    scope: ` 
-                        https://www.googleapis.com/auth/calendar
-                        https://www.googleapis.com/auth/userinfo.email
-                        https://www.googleapis.com/auth/userinfo.profile
-                    `
+                    scope: 'https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
                 }
             }
         })
