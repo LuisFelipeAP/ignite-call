@@ -113,16 +113,13 @@ export default function TimeInterval() {
 
   return (
     <>
-      <NextSeo
-        title='Selecione sua disponibilidade | Ignite Call'
-        noindex
-      />
+      <NextSeo title="Selecione sua disponibilidade | Ignite Call" noindex />
       <Container>
         <Header>
           <Heading as="strong">Quase lá</Heading>
           <Text>
-            Defina o intervalo de horários que você está disponível em cada dia da
-            semana.
+            Defina o intervalo de horários que você está disponível em cada dia
+            da semana.
           </Text>
           <MultiStep size={4} currentStep={3} />
         </Header>
@@ -170,7 +167,9 @@ export default function TimeInterval() {
             })}
           </IntervalsContainer>
 
-          {errors.intervals && <FormError>{errors.intervals.message}</FormError>}
+          {errors.intervals && (
+            <FormError>{errors.intervals.message}</FormError>
+          )}
 
           <Button type="submit" disabled={isSubmitting}>
             Próximo passo

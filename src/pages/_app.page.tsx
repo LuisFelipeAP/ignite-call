@@ -22,7 +22,7 @@ export default function App({
             type: 'website',
             locale: 'pt_BR',
             url: 'https://www.url.ie/',
-            siteName: 'Ignite Call'
+            siteName: 'Ignite Call',
           }}
         />
         <Component {...pageProps} />
