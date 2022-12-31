@@ -10,6 +10,7 @@ import {
 import { GetServerSideProps } from 'next'
 import { unstable_getServerSession } from 'next-auth'
 import { useSession } from 'next-auth/react'
+import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import { ArrowRight } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
@@ -47,6 +48,11 @@ export default function UpdateProfile() {
   }
 
   return (
+    <>
+      <NextSeo
+        title='Atualize seu perfil | Ignite Call'
+        noindex
+      />
     <Container>
       <Header>
         <Heading as="strong">Bem-vindo ao Ignite Call!</Heading>
@@ -81,6 +87,7 @@ export default function UpdateProfile() {
         </Button>
       </ProfileBox>
     </Container>
+    </>
   )
 }
 
